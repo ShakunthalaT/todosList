@@ -1,0 +1,47 @@
+###
+POST http://localhost:3000/register/ 
+Content-Type: application/json 
+
+{
+    "id" : 4,
+"username" : "shakunthala",
+"password":"Roja@1234"
+}
+
+###
+POST http://localhost:3000/login/ 
+Content-Type: application/json 
+
+{
+    "username" : "shakunthala",
+    "password"  : "Roja@1234"
+} 
+
+### 
+POST http://localhost:3000/todos/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYWt1bnRoYWxhIiwiaWF0IjoxNzIyNTk2Mzk5fQ.JhHT3iqF3ihoZ8KgE3zp_56EAq1bRQMoUIeMIPgyZQU
+Content-Type: application/json 
+
+{
+  "id" : 5,
+  "user_id" :105,
+  "description" : "react.js successfully completed",
+  "status" : "active"
+} 
+###
+DELETE http://localhost:3000/todos/5 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYWt1bnRoYWxhIiwiaWF0IjoxNzIyNTk2Mzk5fQ.JhHT3iqF3ihoZ8KgE3zp_56EAq1bRQMoUIeMIPgyZQU
+
+### 
+GET http://localhost:3000/todos/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYWt1bnRoYWxhIiwiaWF0IjoxNzIyNTk2Mzk5fQ.JhHT3iqF3ihoZ8KgE3zp_56EAq1bRQMoUIeMIPgyZQU
+
+### 
+PUT http://localhost:3000/todos/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYWt1bnRoYWxhIiwiaWF0IjoxNzIyNTk2Mzk5fQ.JhHT3iqF3ihoZ8KgE3zp_56EAq1bRQMoUIeMIPgyZQU
+Content-Type: application/json 
+
+{
+ "description" : "node.js successfully completed",
+  "status" : "InActive"
+}
